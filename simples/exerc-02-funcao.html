@@ -5,7 +5,10 @@
     //entrada
     let temperaturaF = prompt("Temperatura em graus Fahrenheit?")
     //processamento
-    let temperaturaC = (temperaturaF - 32) * 5 / 9
+    function calculoTempC(tempF = 0) {
+        return (tempF - 32) * 5 / 9
+    }
+    let temperaturaC = calculoTempC(temperaturaF)
     //saida
     document.write("Valor correspondente em graus Celsius: " + temperaturaC)
 </script>

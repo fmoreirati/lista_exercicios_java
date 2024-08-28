@@ -5,7 +5,11 @@
     //entrada
     let temperaturaC = prompt("Temperatura em graus Celsius?")
     //processamento
-    let temperaturaF = (temperaturaC * 9 / 5) + 32
+    function calcularTempF(tempC = 0) {
+        return (tempC * 9 / 5) + 32
+    }
+
+    let temperaturaF = calcularTempF(temperaturaC)
     //saida
     alert("Valor correspondente em \n graus Fahrenheit: " + temperaturaF)
     console.log("Valor correspondente em graus Fahrenheit:\n " + temperaturaF)
