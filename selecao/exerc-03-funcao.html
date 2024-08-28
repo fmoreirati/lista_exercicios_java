@@ -1,6 +1,5 @@
 <meta charset="utf-8">
 <script>
-
     //3. Cálculo da média semestral e aprovação Declaração: Crie um programa que calcule a média semestral de um aluno com base em duas notas. Se a média for 6,0 ou superior, exiba uma mensagem de aprovação.
 
     // entrada
@@ -8,11 +7,19 @@
     let nota2 = parseFloat(prompt("Nota 2?"))
 
     //processamento
-    let media = (nota1 + nota2) / 2
-    let resposta = ""
-    if (media > 6) {
-        resposta = "Aprovado"
+    function calcularMedia(nota1 = 0, nota2 = 0) {
+        return (nota1 + nota2) / 2
     }
+
+    function verificarResultado(media = 0, mediaMinima = 6) {
+        let resposta = ""
+        if (media > mediaMinima) {
+            resposta = "Aprovado"
+        }
+        return resposta
+    }
+    let media = calcularMedia(nota1, nota2)
+    let resultado = verificarResultado(media)
     document.write("Media: ", media)
-    document.write("Resposta: ", resposta)
+    document.write("Resposta: ", resultado)
 </script>
